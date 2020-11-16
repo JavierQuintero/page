@@ -6,84 +6,8 @@
     <link rel="shortcut icon" href="img/svg/icono02.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/styleNav.css">
     <link rel="stylesheet" href="css/styleSocial.css">
+    <link rel="stylesheet" href="css/styleTablet.css">
     <title>DevJavi: Actualización sin límite</title>
-    <style>
-     
-            .contenido p{
-                margin-bottom: 15px;
-                padding: 15px 5px;
-                border-bottom: 1.2px solid gold;
-                border-right: 1.2px solid gold;
-            }
-            .contenido p:hover{
-                background: cornsilk;
-            }
-      
-    
-       
-        #icon_menu{
-            width: 40px;
-        }
-        #navbar,
-        .navegacion{
-            display: flex;
-        }
-        #btn-menu,
-        #icon_menu{
-            display: none;
-        }
-        #navbar{
-            justify-content: space-around;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            transition: 0.5s;
-        }
-        .navegacion{
-            list-style: none;
-        }
-        .navegacion li a{
-            text-decoration: none;
-            padding: 20px 15px;
-        }
-        .navegacion li:hover {
-            background: #aaa8a8;
-        }
-    @media (max-width:768px){
-        #icon_menu{
-            display: block;
-        }
-        .navBar{
-            display: none;
-        }
-        #btn-menu:checked ~ .navBar{
-            display: block;
-        }
-        #navbar{
-            flex-direction: column;
-            background: #ccc;
-        }
-        .menuFlex{
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .navBar{
-            transition: 1s;
-        }
-        .navegacion{
-            flex-direction: column;
-        }
-        .navegacion li{
-            display: block;
-            width: 100%;
-            padding: 20px;
-        }
-
-    }
-        </style>
 </head>
 <body>
     <header id="navbar">

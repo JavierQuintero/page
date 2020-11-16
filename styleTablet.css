@@ -1,0 +1,33 @@
+@media (max-width:768px){
+    #icon_menu{
+        display: block;
+    }
+    .navBar{
+        display: none;
+    }
+    #btn-menu:checked ~ .navBar{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        background: #ccc;
+    }
+    .menuFlex{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navBar{
+        transition: 1s;
+    }
+    .navegacion{
+        flex-direction: column;
+    }
+    .navegacion li{
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+
+}
