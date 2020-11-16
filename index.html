@@ -8,6 +8,81 @@
     <link rel="stylesheet" href="css/styleSocial.css">
     <link rel="stylesheet" href="css/styleTablet.css">
     <title>DevJavi: Actualización sin límite</title>
+    <style>
+
+        .contenedorSlid{
+            margin-top: 80px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .slider-contenedor{
+            width: 100%;
+            display: flex;
+        }
+        .contenido-slider{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contenido-slider:nth-child(2){
+            background: #332863;
+            color: #fff;
+        }
+        .contenido-slider:nth-child(3){
+            background: #611a68;
+            color: #fff;
+        }
+        .contenido-slider:nth-child(2) a{
+            background: #fff;
+            color: #332863;
+        }
+        .imgSlid{
+            width: 400px;
+        }
+        .contenido-slider  > div{
+            width: 40%;
+        }
+        .contenido-slider h2{
+            font-weight: 300;
+            text-align: justify;
+            line-height: 30px;
+        }
+        .contenido-slider a{
+            color: #fff;
+            background: #332863;
+            width: 100px;
+            display: block;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 20px;
+            text-decoration: none; 
+        }
+        @media screen and (max-width:900px){
+            .imgSlid{
+                width: 250px;
+            }
+            .contenido-slider > div{
+                width: 40%;
+
+            }
+            .contenido-slider h2{
+                font-size: 23px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .contenido-slider{
+                flex-direction: column-reverse;
+            }
+            .contenido-slider > div{
+                width: 80%;
+
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="navbar">
@@ -33,21 +108,20 @@
                 </nav>
             
     </header> 
-
-    
+   
     <div class="social">
         <ul>
             <li><a href="#" class="icon face" target="_blanck">Facebook</a></li>
             <li><a href="#" class="icon tweet" target="_blanck">Linkedin</a></li>
         </ul>
     </div>
-  
 
     <div class="cont-float-wapp">
         <a href="https://wa.me/573112688955">
             <div class="btn-float-wapp"></div>
         </a>
     </div> 
+
         <!-- Animacion scroll navBar -->
     <script type="text/javascript">
 		
@@ -62,7 +136,68 @@
 			}
 		}
     </script>
-    
+
+        <!-- slider  -->
+    <div class="contenedorSlid">
+        <div class="slider-contenedor">
+            <section class="contenido-slider">
+                <div>
+                    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis laboriosam ullam quia omnis voluptatem, harum ipsam error numquam modi quaerat?</h2>
+                    <a href="#">contact us</a>
+                </div>
+                <img src="img/svg/svg/enConstruccion.svg" class="imgSlid">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum perspiciatis illo saepe nostrum incidunt sed dolorem id blanditiis aut.</h2>
+                    <a href="#">contact us</a>
+                </div>
+                <img src="img/svg/svg/imghtml.svg" class="imgSlid">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi veniam quisquam mollitia quidem totam tempore nobis magnam deserunt officiis!</h2>
+                    <a href="#">contact us</a>
+                </div>
+                <img src="img/svg/svg/protoSelec.svg" class="imgSlid">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis laboriosam ullam quia omnis voluptatem, harum ipsam error numquam modi quaerat?</h2>
+                    <a href="#">contact us</a>
+                </div>
+                <img src="img/svg/svg/enConstruccion.svg" class="imgSlid">
+            </section>
+        </div>
+    </div>
+        <!-- Animacion slider -->
+    <script>
+        let slider = document.querySelector('.slider-contenedor');
+        let targetSlider = document.querySelectorAll('.contenido-slider');
+        let contador = 1;
+        let width = targetSlider[0].clientWidth;
+        let intervalo = 5000;
+
+        window.addEventListener('resize', function(){
+            width = targetSlider[0].clientWidth;
+        })
+        setInterval(function(){
+            slides();
+        },intervalo);
+        function slides(){
+            slider.style.transform = "translate("+(-width*contador)+"px)";
+            slider.style.transition ="transform 1s";
+            contador++
+            if(contador == targetSlider.length){
+                setTimeout(function(){
+                    slider.style.transform = "translate(0px)";
+                    slider.style.transition ="transform 0s";
+                    contador = 1;
+                },intervalo/2)
+            }
+        };
+    </script>
+
     <div class="contenido">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
