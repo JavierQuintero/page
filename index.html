@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/svg/icono02.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/styleNav.css">
+    <link rel="stylesheet" href="css/styleSocial.css">
+    <title>DevJavi: Actualización sin límite</title>
+    <style>
+     
+            .contenido p{
+                margin-bottom: 15px;
+                padding: 15px 5px;
+                border-bottom: 1.2px solid gold;
+                border-right: 1.2px solid gold;
+            }
+            .contenido p:hover{
+                background: cornsilk;
+            }
+      
+    
+       
+        #icon_menu{
+            width: 40px;
+        }
+        #navbar,
+        .navegacion{
+            display: flex;
+        }
+        #btn-menu,
+        #icon_menu{
+            display: none;
+        }
+        #navbar{
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: 0.5s;
+        }
+        .navegacion{
+            list-style: none;
+        }
+        .navegacion li a{
+            text-decoration: none;
+            padding: 20px 15px;
+        }
+        .navegacion li:hover {
+            background: #aaa8a8;
+        }
+    @media (max-width:768px){
+        #icon_menu{
+            display: block;
+        }
+        .navBar{
+            display: none;
+        }
+        #btn-menu:checked ~ .navBar{
+            display: block;
+        }
+        #navbar{
+            flex-direction: column;
+            background: #ccc;
+        }
+        .menuFlex{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .navBar{
+            transition: 1s;
+        }
+        .navegacion{
+            flex-direction: column;
+        }
+        .navegacion li{
+            display: block;
+            width: 100%;
+            padding: 20px;
+        }
+
+    }
+        </style>
+</head>
+<body>
+    <header id="navbar">
+			<div class="menuFlex">
+                <div class="logo" >
+                    <img src="./img/svg/icono03.svg">
+                     <!-- <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Logo_of_the_SCP_Foundation.png" >  -->
+                </div>
+    
+                
+                <label for="btn-menu" class="lbl-menu"> 
+                    <img src="./img/svg/svg/001-menu.svg" id="icon_menu">
+                </label>
+            </div>
+            <input type="checkbox" id="btn-menu"/>     
+                <nav class="navBar" id="nave">
+                    <ul class="navegacion" >
+                        <li><a href="#" >Inicio</a></li>
+                        <li><a href="#" >Acerca de</a></li>
+                        <li><a href="#" >Galeria</a></li>
+                        <li><a href="#" >Contacto</a></li>
+                    </ul>
+                </nav>
+            
+    </header> 
+
+    
+    <div class="social">
+        <ul>
+            <li><a href="#" class="icon face" target="_blanck">Facebook</a></li>
+            <li><a href="#" class="icon tweet" target="_blanck">Linkedin</a></li>
+        </ul>
+    </div>
+  
+
+    <div class="cont-float-wapp">
+        <a href="https://wa.me/573112688955">
+            <div class="btn-float-wapp"></div>
+        </a>
+    </div> 
+        <!-- Animacion scroll navBar -->
+    <script type="text/javascript">
+		
+        let $ubiPrin = window.pageYOffset; //$ubiPrin = ubicacionPrincipal
+		window.onscroll = function(){
+			let $des = window.pageYOffset; //$des = desplazamiento
+			if($ubiPrin >= $des){
+				document.getElementById('navbar').style.top = '0';
+			}else{
+				document.getElementById('navbar').style.top = '-100px';
+                document.getElementById("btn-menu").checked = false;
+			}
+		}
+    </script>
+    
+    <div class="contenido">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+    </div>
+
+</body>
+</html>

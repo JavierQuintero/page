@@ -1,0 +1,40 @@
+:root{
+	--light:#fff;
+	--heightNav:80px;
+}
+ *{
+ 	margin:0;
+ 	padding:0;
+ 	box-sizing:border-box;
+ }
+ /* nav{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 	background:gray; 	
+    width:100%;
+ 	height:var(--heightNav); 
+ 	display:flex;
+ 	justify-content:space-around;	
+ 	align-items:center;
+ 	position:fixed;
+ 	top:0;
+ 	transition:top 0.5s; 
+ }
+ .navegacion > a{
+ 	display:inline-block;
+ 	text-decoration:none;
+ 	color:var(--light);
+ 	padding:20px;
+ } */
+ .logo > img{
+ 	height:var(--heightNav);
+ 	vertical-align:top;
+ 	background:#ddd;
+ }
+ .contenido{
+ 	margin:auto;
+ 	margin-top:100px;
+ 	max-width:80%;
+
+ }
+
+ 

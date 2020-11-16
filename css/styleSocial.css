@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+:root{
+    --colorIcon:#000;
+    --bgIcon:#000;
+}
+
+/* Redes sociales =-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.social{
+    font-family: 'Goldman', cursive;
+    position: fixed;
+    left: 0;
+    top: 150px;
+    width: 3%;
+    z-index: 2000;
+}
+.social ul{
+    display: grid;
+    list-style: none;
+    padding-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    transform: rotate(90deg);
+}
+.social ul li{
+    transition: all .4s ease-out;
+}
+        .social ul li:hover a{
+            box-sizing: border-box;
+            border-top: .5px solid #000;
+        }
+
+.social ul li a{
+    display: inline-block;
+    color: var(--colorIcon);
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 10px 15px;
+    
+}
+
+
+/* Boton flotante -=-=-=-=-=-=-==-=-=-=- */
+
+.cont-float-wapp{
+    --pobtn:27px;
+    position: fixed;
+    bottom: var(--pobtn);
+    right: var(--pobtn);
+    cursor: pointer;
+
+}
+.btn-float-wapp{
+    --tBtn:60px;
+    position: relative;
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 1.5em;
+    width: var(--tBtn);
+    height: var(--tBtn);
+    border-radius: 50px;
+    transition: all 250ms linear;
+    
+    background: url('../img/FOTOJAVI.jpg');
+    background-size: cover;
+    animation: imgEmerg 2s cubic-bezier(0,.56,.97,.34) infinite;
+}
+
+    .cont-float-wapp:hover .btn-float-wapp{
+        background-color: #00ff00;
+        border-color: #4d4d4d;
+        color: #4d4d4d;
+
+        /*other version*/
+
+         box-shadow: 0 0 #4d4d4d,
+                    0 1px #00fe00,
+                    0 1.5px 1px #00ff00;
+        /* transform: translateY(-3px); */
+        animation: bit 210ms ease infinite alternate;
+    } 
+    .cont-float-wapp:active .btn-float-wapp{
+        box-shadow: 0 0 #4d4d4d,
+                    0 1px #00fe00; 
+       /* transform: translateY(-1.7px);  */
+    } 
+
+        /*para keyframes*/
+            @keyframes bit {
+                from{
+                    transform: translateY(3px);
+                }
+                to{
+                    transform: translateY(-3px);
+                }
+            }
+
+            @keyframes imgEmerg {
+                0%{
+                    opacity: 0.1;
+                }
+                50%{
+                    opacity: 0.8;
+                }
+                100%{
+                    opacity: 1;
+                }
+                
+            }
+        /*-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+
+
+
+
+        .btn-float-wapp:after {
+            background: rgba(0,0,0,0.6);
+            font-size: 20px;
+            color: #fff;
+            font-family: 'Goldman', cursive;            
+            content: 'Whatsapp';
+            position: absolute;
+            right: 2.3em;
+            padding: 10px;
+            border-radius: 17px;
+            transition: transform 1.7s, opacity 1.5s;
+            opacity: 0;
+            transform: rotate(90deg) translate(-90px, -180px);
+        }
+        .cont-float-wapp:hover .btn-float-wapp:after{
+            transform: none;
+            opacity: 1;
+        }
