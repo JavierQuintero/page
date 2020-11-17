@@ -17,7 +17,7 @@
     display: grid;
     list-style: none;
     padding-bottom: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     transform: rotate(90deg);
 }
 .social ul li{
