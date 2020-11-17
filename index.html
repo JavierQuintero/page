@@ -7,136 +7,14 @@
     <link rel="stylesheet" href="css/styleNav.css">
     <link rel="stylesheet" href="css/styleSocial.css">
     <link rel="stylesheet" href="css/styleTablet.css">
+    <link rel="stylesheet" href="styleSlider.css">
     <title>DevJavi: Actualización sin límite</title>
     <style>
 
-        .contenedorSlid{
-            margin-top: 80px;
-            width: 100%;
-            overflow: hidden;
-        }
-        .slider-contenedor{
-            width: 100%;
-            display: flex;
-        }
-        .contenido-slider{
-            width: 100%;
-            height: 600px;
-            display: flex;
-            flex-shrink: 0;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .contenido-slider:nth-child(2){
-            background: #332863;
-            color: #fff;
-        }
-        .contenido-slider:nth-child(3){
-            background: #611a68;
-            color: #fff;
-        }
-        .contenido-slider:nth-child(2) a{
-            background: #fff;
-            color: #332863;
-        }
-        .imgSlid{
-            width: 400px;
-        }
-        .contenido-slider  > div{
-            width: 40%;
-        }
-        .contenido-slider h2{
-            font-weight: 300;
-            text-align: justify;
-            line-height: 30px;
-        }
-        .contenido-slider a{
-            color: #fff;
-            background: #332863;
-            width: 100px;
-            display: block;
-            padding: 15px 0;
-            text-align: center;
-            border-radius: 3px;
-            margin-top: 20px;
-            text-decoration: none; 
-        }
-        @media screen and (max-width:900px){
-            .imgSlid{
-                width: 250px;
-            }
-            .contenido-slider > div{
-                width: 40%;
 
-            }
-            .contenido-slider h2{
-                font-size: 23px;
-            }
-        }
-        @media screen and (max-width:768px){
-            .contenido-slider{
-                flex-direction: column-reverse;
-            }
-            .contenido-slider > div{
-                width: 80%;
-
-            }
-        }
     </style>
 </head>
 <body>
-    <header id="navbar">
-			<div class="menuFlex">
-                <div class="logo" >
-                    <img src="./img/svg/icono03.svg">
-                     <!-- <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Logo_of_the_SCP_Foundation.png" >  -->
-                </div>
-    
-                
-                <label for="btn-menu" class="lbl-menu"> 
-                    <img src="./img/svg/svg/001-menu.svg" id="icon_menu">
-                </label>
-            </div>
-            <input type="checkbox" id="btn-menu"/>     
-                <nav class="navBar" id="nave">
-                    <ul class="navegacion" >
-                        <li><a href="#" >Inicio</a></li>
-                        <li><a href="#" >Acerca de</a></li>
-                        <li><a href="#" >Galeria</a></li>
-                        <li><a href="#" >Contacto</a></li>
-                    </ul>
-                </nav>
-            
-    </header> 
-   
-    <div class="social">
-        <ul>
-            <li><a href="#" class="icon face" target="_blanck">Facebook</a></li>
-            <li><a href="#" class="icon tweet" target="_blanck">Linkedin</a></li>
-        </ul>
-    </div>
-
-    <div class="cont-float-wapp">
-        <a href="https://wa.me/573112688955">
-            <div class="btn-float-wapp"></div>
-        </a>
-    </div> 
-
-        <!-- Animacion scroll navBar -->
-    <script type="text/javascript">
-		
-        let $ubiPrin = window.pageYOffset; //$ubiPrin = ubicacionPrincipal
-		window.onscroll = function(){
-			let $des = window.pageYOffset; //$des = desplazamiento
-			if($ubiPrin >= $des){
-				document.getElementById('navbar').style.top = '0';
-			}else{
-				document.getElementById('navbar').style.top = '-100px';
-                document.getElementById("btn-menu").checked = false;
-			}
-		}
-    </script>
-
         <!-- slider  -->
     <div class="contenedorSlid">
         <div class="slider-contenedor">
@@ -170,6 +48,60 @@
             </section>
         </div>
     </div>
+
+    <header id="navbar">
+			<div class="menuFlex">
+                <div class="logo" >
+                    <img src="./img/svg/icono03.svg">
+                     <!-- <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Logo_of_the_SCP_Foundation.png" >  -->
+                </div>
+    
+                
+                <label for="btn-menu" class="lbl-menu"> 
+                    <img src="./img/svg/svg/001-menu.svg" id="icon_menu">
+                </label>
+            </div>
+            <input type="checkbox" id="btn-menu"/>     
+                <nav class="navBar" id="nave">
+                    <ul class="navegacion" >
+                        <li><a href="#" >Inicio</a></li>
+                        <li><a href="#" >Acerca de</a></li>
+                        <li><a href="#" >Galeria</a></li>
+                        <li><a href="#" >Contacto</a></li>
+                    </ul>
+                </nav>
+            
+    </header>    
+
+    <div class="social">
+        <ul>
+            <li><a href="#" class="icon face" target="_blanck">Facebook</a></li>
+            <li><a href="#" class="icon tweet" target="_blanck">Linkedin</a></li>
+        </ul>
+    </div>
+
+    <div class="cont-float-wapp">
+        <a href="https://wa.me/573112688955">
+            <div class="btn-float-wapp"></div>
+        </a>
+    </div> 
+
+
+        <!-- Animacion scroll navBar -->
+    <script type="text/javascript">
+		
+        let $ubiPrin = window.pageYOffset; //$ubiPrin = ubicacionPrincipal
+		window.onscroll = function(){
+			let $des = window.pageYOffset; //$des = desplazamiento
+			if($ubiPrin >= $des){
+				document.getElementById('navbar').style.top = '0';
+			}else{
+				document.getElementById('navbar').style.top = '-100px';
+                document.getElementById("btn-menu").checked = false;
+			}
+		}
+    </script>
+
         <!-- Animacion slider -->
     <script>
         let slider = document.querySelector('.slider-contenedor');
