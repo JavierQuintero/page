@@ -41,14 +41,17 @@
         .caja{
             width: 50px;
             height: 50px;
-            background: linear-gradient(#3c61b3,  #863cc3);
+            background: linear-gradient(#2559c9,  #420a0a);
+            color: cornsilk;
             position: relative;
-            left: -500px;
+            left: -450px;
             border: 1px solid  rgb(145, 235, 230);
             overflow: hidden;
 
             display: grid;
             align-items: center;
+            justify-content: center;
+            font-weight: bold;
         }
         #inputNumber{
             max-width: 450px;
@@ -165,7 +168,7 @@
         let targetSlider = document.querySelectorAll('.contenido-slider');
         let contador = 1;
         let width = targetSlider[0].clientWidth;
-        let intervalo = 5000;
+        let intervalo = 4000;
 
         window.addEventListener('resize', function(){
             width = targetSlider[0].clientWidth;
@@ -201,7 +204,7 @@
         function Scroll(){
             let scrollTop = document.documentElement.scrollTop;
             parallax.style.transform = 'translateY('+ scrollTop*-0.5 +'px)';
-            titulo.style.transform = 'translateY('+ scrollTop*0.2 +'px)'
+            titulo.style.transform = 'translateY('+ scrollTop*0.3 +'px)'
         }
         window.addEventListener('scroll', Scroll);
     </script>
@@ -212,23 +215,30 @@
         <p>Animación</p>
     </div>
     <div class=" anime">
-        <div class="caja"></div>
-        <div class="caja"></div>
-        <div class="caja"></div>
-        <div class="caja"></div>
-        <div class="caja"></div>
+        <div class="caja">J</div>
+        <div class="caja">A</div>
+        <div class="caja">V</div>
+        <div class="caja">I</div>
+        <div class="caja">E</div>
+        <div class="caja">R</div>
     </div>
     <input type="number" value="0" id="inputNumber"/>
     <script>
         var elements = document.querySelector('.caja');
         var inputNumber = document.querySelector('#inputNumber');
-
+        var widthPage = document.documentElement;
+        console.log(widthPage);
+        
             anime({
               targets: '.caja',
-              translateX: anime.stagger(350),
-              delay: anime.stagger(500,{from:'last'}),
+              translateX: anime.stagger(177),
+              delay: anime.stagger(300,{
+                                        from:'last',
+                                        start: 800,
+                                        easing: 'easeInOutCubic'
+                                        }),
               direction: 'alternate',
-              duration: 5000,
+              duration: 4000,
               loop: true
             });
             anime({

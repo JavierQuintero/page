@@ -55,6 +55,7 @@
 	.navegacion li a{
 		text-decoration: none;
 		padding: 20px 15px;
+		font-size: 1.6em;
 	}
 	.navegacion li:hover {
 		background: #aaa8a8;
