@@ -19,7 +19,7 @@
         .cite{
             width: 70%;
             text-align: center;
-            margin: 40px auto; 
+            margin: 200px auto; 
             font-weight: bolder;
         }
         .container{
@@ -27,7 +27,7 @@
             width: 80%;
             text-align: center;
             margin-left: 5%;
-            font-size: 2em;
+            font-size: 3em;
         }
         .anime{
             width: 100%;
@@ -77,14 +77,20 @@
             background: url("https://cdn.pixabay.com/photo/2020/11/07/01/28/abstract-5719221_960_720.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: right top;
             width: 100%;
-            height: 140vh;
+            height: 200vh;
             z-index: -1;
         }
         .contenedorParallax .titulo{
             font-size: 4em;
             text-align: center;
-            margin-top: -25px;
+            margin-top: -90px;
+            transition: opacity 0.3s ease;
+        }
+        .contenedorParallax .titulo:hover{
+            opacity: 0.4;
+            color: #444;
         }
     </style>
 </head>
@@ -97,28 +103,28 @@
                     <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis laboriosam ullam quia omnis voluptatem, harum ipsam error numquam modi quaerat?</h2>
                     <a href="#">contact us</a>
                 </div>
-                <img src="img/svg/svg/enConstruccion.svg" class="imgSlid">
+                <img src="img/svg/enConstruccion.svg" class="imgSlid">
             </section>
             <section class="contenido-slider">
                 <div>
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum perspiciatis illo saepe nostrum incidunt sed dolorem id blanditiis aut.</h2>
                     <a href="#">contact us</a>
                 </div>
-                <img src="img/svg/svg/imghtml.svg" class="imgSlid">
+                <img src="img/svg/imghtml.svg" class="imgSlid">
             </section>
             <section class="contenido-slider">
                 <div>
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi veniam quisquam mollitia quidem totam tempore nobis magnam deserunt officiis!</h2>
                     <a href="#">contact us</a>
                 </div>
-                <img src="img/svg/svg/protoSelec.svg" class="imgSlid">
+                <img src="img/svg/protoSelec.svg" class="imgSlid">
             </section>
             <section class="contenido-slider">
                 <div>
                     <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis laboriosam ullam quia omnis voluptatem, harum ipsam error numquam modi quaerat?</h2>
                     <a href="#">contact us</a>
                 </div>
-                <img src="img/svg/svg/enConstruccion.svg" class="imgSlid">
+                <img src="img/svg/enConstruccion.svg" class="imgSlid">
             </section>
         </div>
     </div>
@@ -139,8 +145,8 @@
                 <nav class="navBar" id="nave">
                     <ul class="navegacion" >
                         <li><a href="#" >Inicio</a></li>
-                        <li><a href="#" >Acerca de</a></li>
-                        <li><a href="#" >Galeria</a></li>
+                        <li><a href="#parallax" >Parallax</a></li>
+                        <li><a href="#anime" >Anime.js</a></li>
                         <li><a href="#" >Contacto</a></li>
                     </ul>
                 </nav>
@@ -193,7 +199,7 @@
     <p class="cite"><cite autor="David Ogilvy" >"Las mejores ideas vienen como chistes. Haz tus pensamientos tan divertidos como puedas"</cite></p>
     
     
-    <section class="contenedorParallax">
+    <section class="contenedorParallax" id="parallax">
         <div class="parallax"></div>
         <h2 class="titulo">Parallax</h2>
     </section>
@@ -210,7 +216,7 @@
     </script>
 
         <!-- Anime.js -->
-    <div class="container">
+    <div class="container" id="anime">
         <h2>Conexión a Frameworks</h2>
         <p>Animación</p>
     </div>
