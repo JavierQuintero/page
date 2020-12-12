@@ -28,7 +28,7 @@
     color: #332863;
 }
 .imgSlid{
-    width: 400px;
+    width: 500px;
 }
 .contenido-slider  > div{
     width: 40%;
@@ -51,7 +51,7 @@
 }
 @media screen and (max-width:900px){
     .imgSlid{
-        width: 250px;
+        width: 350px;
     }
     .contenido-slider > div{
         width: 40%;

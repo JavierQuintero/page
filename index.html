@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="css/styleSocial.css">
     <link rel="stylesheet" href="css/styleTablet.css">
     <link rel="stylesheet" href="css/styleSlider.css">
+    <link rel="stylesheet" href="css/styleParallax.css">
     <title>DevJavi: Actualización sin límite</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../../anime-master/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body{
             font-family: 'Nunito', sans-serif;
@@ -29,13 +32,15 @@
             margin-left: 5%;
             font-size: 3em;
         }
+        .anime, .caja{
+            justify-content: center;
+            align-items: center;   
+        }
         .anime{
             width: 100%;
             height: 200px;
             background: rgb(145, 235, 230);
             display: flex;
-            justify-content: center;
-            align-items: center;
             overflow-x: hidden;
         }
         .caja{
@@ -47,10 +52,7 @@
             left: -450px;
             border: 1px solid  rgb(145, 235, 230);
             overflow: hidden;
-
             display: grid;
-            align-items: center;
-            justify-content: center;
             font-weight: bold;
         }
         #inputNumber{
@@ -64,34 +66,20 @@
             background: transparent;
             text-align: justify;
         }
-    </style>   
+ 
+
+    </style>
+
+    <!-- animate.css -->
     <style>
-        .contenedorParallax{
-            position: relative;
-            height: 400px;
-            overflow: hidden;
+        .my-element {
+            display: inline-block;
+            margin: 0 0.5rem;
+            animation: shakeY 2300ms infinite alternate both;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
-        .parallax{
-            position: absolute;
-            top: 8.25em;
-            background: url("https://cdn.pixabay.com/photo/2020/11/07/01/28/abstract-5719221_960_720.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: right top;
-            width: 100%;
-            height: 200vh;
-            z-index: -1;
-        }
-        .contenedorParallax .titulo{
-            font-size: 4em;
-            text-align: center;
-            margin-top: -90px;
-            transition: opacity 0.3s ease;
-        }
-        .contenedorParallax .titulo:hover{
-            opacity: 0.4;
-            color: #444;
-        }
+
+       
     </style>
 </head>
 <body>
@@ -107,15 +95,17 @@
             </section>
             <section class="contenido-slider">
                 <div>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illum perspiciatis illo saepe nostrum incidunt sed dolorem id blanditiis aut.</h2>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet placeat unde quos, voluptatibus dignissimos est laborum fugiat porro et expedita?</h2>
                     <a href="#">contact us</a>
                 </div>
                 <img src="img/svg/imghtml.svg" class="imgSlid">
             </section>
             <section class="contenido-slider">
                 <div>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi veniam quisquam mollitia quidem totam tempore nobis magnam deserunt officiis!</h2>
-                    <a href="#">contact us</a>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa dolores dolorem quidem?</h2>
+                    <br>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                   <a href="#">contact us</a>
                 </div>
                 <img src="img/svg/protoSelec.svg" class="imgSlid">
             </section>
@@ -138,7 +128,7 @@
     
                 
                 <label for="btn-menu" class="lbl-menu"> 
-                    <img src="./img/svg/svg/004-menu-3.svg" id="icon_menu">
+                    <img src="./img/svg/004-menu-3.svg" id="icon_menu">
                 </label>
             </div>
             <input type="checkbox" id="btn-menu"/>     
@@ -174,14 +164,16 @@
         let targetSlider = document.querySelectorAll('.contenido-slider');
         let contador = 1;
         let width = targetSlider[0].clientWidth;
-        let intervalo = 4000;
+        let intervalo = 3000;
 
         window.addEventListener('resize', function(){
             width = targetSlider[0].clientWidth;
         })
+
         setInterval(function(){
             slides();
         },intervalo);
+        
         function slides(){
             slider.style.transform = "translate("+(-width*contador)+"px)";
             slider.style.transition ="transform 1s";
@@ -217,7 +209,7 @@
 
         <!-- Anime.js -->
     <div class="container" id="anime">
-        <h2>Conexión a Frameworks</h2>
+        <h2>Conexión a <span class="my-element">Frameworks</span></h2>
         <p>Animación</p>
     </div>
     <div class=" anime">
@@ -228,51 +220,41 @@
         <div class="caja">E</div>
         <div class="caja">R</div>
     </div>
-    <input type="number" value="0" id="inputNumber"/>
+    
     <script>
         var elements = document.querySelector('.caja');
-        var inputNumber = document.querySelector('#inputNumber');
-        var widthPage = document.documentElement;
-        console.log(widthPage);
+            // pendiente
+        var widthPage = document.documentElement.clientWidth;
+        console.log(widthPage)
         
             anime({
               targets: '.caja',
-              translateX: anime.stagger(177),
-              delay: anime.stagger(300,{
+              translateX: anime.stagger(160),
+              delay: anime.stagger(200,{
                                         from:'last',
-                                        start: 800,
+                                        start: 1200,
                                         easing: 'easeInOutCubic'
-                                        }),
+                                    }),
               direction: 'alternate',
               duration: 4000,
               loop: true
             });
-            anime({
-                targets: inputNumber,
-                value:[0, 100],
-                duration: 5000,
-                round: 1,
-                direction: 'alternate',
-                loop: true
-            });
     </script>
 
     <div class="contenido">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
     </div>
-
-
 
 
     <div class="social">
