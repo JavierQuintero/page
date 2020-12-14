@@ -2,7 +2,7 @@
     position: relative;
     height: 400px;
     overflow: hidden;
-    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 80% 90%, 59% 100%, 29% 93%, 0 100%);
+    clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 90%);
 }
 .parallax{
     position: absolute;
