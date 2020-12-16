@@ -65,6 +65,12 @@
                 font-size: 2em;
             }
             .caja{
+                left: 45px;
+            }
+        }
+        @media screen and (max-width:360px){
+           
+            .caja{
                 left: 25px;
             }
         }
@@ -224,7 +230,8 @@
         var elements = document.querySelector('.caja');
             // pendiente
         var widthPage = document.documentElement.clientWidth;
-        var ancho = widthPage/ 7.5;
+        var ancho = widthPage/ 9.8;
+        debugger
         
             anime({
               targets: '.caja',
