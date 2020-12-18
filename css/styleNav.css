@@ -91,7 +91,7 @@
 		}
 		.navegacion li:hover ul{
 			display: none;
-			transform: translateY(20%) translateX(-10%);
+			transform: translateY(-30%) translateX(-10%);
 
 		}
 		
