@@ -33,6 +33,7 @@
 
 	#icon_menu{
 		width: 40px;
+		cursor: pointer;
 	}
 	#navbar,
 	.navegacion{
@@ -50,16 +51,47 @@
 		top: 0;
 		transition: 0.5s;
 	}
-	.navegacion{
+	ul{
+		border-radius: 5px 10px 15px 15px;
+		box-sizing: border-box;
+	}
+	.navegacion ul{
+		display: none;
+	}
+	ul li{
 		list-style: none;
 	}
 	.navegacion li a{
 		text-decoration: none;
 		padding: 20px 15px;
-		font-size: 1.6em;
+		font-size: 1.4em;
+	}
+	.navegacion li ul{
+		position: absolute;
+		background: #aaa8a8;
 	}
 	.navegacion li:hover {
 		background: #aaa8a8;
+	} 
+	.navegacion li:hover ul{
+		display: none;
+		/* position: absolute; */
+		background: #aaa8a8;
+		transform: translateY(8%);
+		transition: all 0.3ms;
+	}
+
+	.navegacion li ul li:hover{
+		background: #ddd;
+	}
+	
+	@media (max-width: 768px){
+		ul{
+			border-radius: 5px 10px 20px 40px;
+		}
+		.navegacion li:hover ul{
+			display: none;
+		}
 	}
 
  
