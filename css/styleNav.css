@@ -61,6 +61,12 @@
 	ul li{
 		list-style: none;
 	}
+	.navegacion li a span{
+		font-weight: bold;
+		position: absolute;
+		margin-left: 5px;
+		transform: rotate(90deg);
+	}
 	.navegacion li a{
 		text-decoration: none;
 		padding: 20px 15px;
@@ -89,8 +95,12 @@
 		ul{
 			border-radius: 5px 10px 20px 40px;
 		}
+		.navegacion li a span{
+			position: absolute;
+			right: 20px;
+		}
 		.navegacion li ul{
-			transform: translateY(-50%);
+			font-size: 0.9em;
 			
 		}
 		.navegacion li:hover ul{
