@@ -52,7 +52,7 @@
 		transition: 0.5s;
 	}
 	ul{
-		border-radius: 5px 10px 15px 15px;
+		border-radius: 5px;
 		box-sizing: border-box;
 	}
 	.navegacion ul{
@@ -89,9 +89,12 @@
 		ul{
 			border-radius: 5px 10px 20px 40px;
 		}
+		.navegacion li ul{
+			transform: translateY(-50%);
+			
+		}
 		.navegacion li:hover ul{
 			display: none;
-			transform: translateY(-30%) translateX(-10%);
 
 		}
 		
