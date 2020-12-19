@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/svg/icono03.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styleNav.css">
     <link rel="stylesheet" href="css/styleSocial.css">
@@ -16,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../anime-master/lib/anime.min.js"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body{
@@ -79,7 +80,20 @@
         }
 
     </style>
-
+    <!-- particles -->
+    <style>
+        .tituloParticles{
+            margin: 30px 10%;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8em;
+            color: red;
+        }
+        #particles-js{
+            width: 100%;
+            height: 300px;
+            background-color: rgb(20, 43, 85);
+        }
+    </style>
     <!-- animate.css -->
     <style>
         .my-element {
@@ -262,16 +276,17 @@
               loop: true
             });
     </script>
-
     <div class="contenido">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
+    </div>
+    
+    <h2 class="tituloParticles">Feliz Navidad</h2>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <div class="contenido">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
@@ -297,5 +312,7 @@
 
     
   
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
