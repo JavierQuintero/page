@@ -17,7 +17,7 @@
 }
 .contenedorParallax .titulo{
     font-size: 4em;
-    color: #fff;
+    color: red;
     text-align: center;
     margin-top: -85px;
     transition: opacity 0.3s ease;
@@ -29,7 +29,8 @@
 @media (max-width:768px){
    
     .contenedorParallax .titulo{
-        font-size: 3em;
-        margin-top: -250px;
+        font-size: 2em;
+        margin-top: -350px;
+        padding: 10px 5px;
     }
 }
