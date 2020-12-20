@@ -27,9 +27,7 @@
     color: #444;
 }
 @media (max-width:768px){
-    .contenedorParallax{
-        height: 400px;
-    }
+   
     .contenedorParallax .titulo{
         font-size: 3em;
         margin-top: -250px;
