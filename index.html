@@ -107,8 +107,53 @@
 
        
     </style>
+    <!-- inputs -->
+    <style type="text/css">
+    .divInput{
+        margin: 10%;
+    }
+        input[type=range]{
+            display:block;
+            width:90%;
+            height:15px;
+            margin:20px auto;
+            border-radius:5px;
+            appearance: none;
+            background:transparent;
+            box-shadow: inset 0 3px 18px rgba(0,0,0,0.6);
+            outline:none;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            appearance: none;
+            width:2.5em;
+            height:2.5em;
+            background-color: #eee;
+            border-radius: 50px;
+            cursor:pointer;
+        }
+        input[type=range]::-webkit-slider-thumb:hover{
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.1),
+                        0 0 0 6px #eee;
+        }
+        input[type=range]:active::-webkit-slider-thumb{
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.1),
+                        0 0 0 6px #eee;
+        }
+        input[type=range]:after{
+            content:'255';
+            color:#fff;
+        }
+        input[type=range]:before{
+            content:'0';
+            color:#fff;
+        }
+        
+        
+    </style>
 </head>
+
 <body>
+
         <!-- slider  -->
     <div class="contenedorSlid">
         <div class="slider-contenedor">
@@ -316,6 +361,34 @@
             <div class="btn-float-wapp"></div>
         </a>
     </div> 
+
+    <!-- Inputs -->
+    <div class="divInput">
+        <h2>Select your color: <span id="colorChanging" style="display:block;">rgb(12,123,172)</span></h2>
+	
+        <label for="inputRed" >red:</label>
+        <input type="range" id="inputRed" value="12" min="0" max="255" >
+        
+        <label for="inputGreen" >green:</label>
+        <input type="range" id="inputGreen" value="123" min="0" max="255" >
+        
+        <label for="inputBlue" >blue:</label>
+        <input type="range" id="inputBlue" value="172" min="0" max="255" >
+    </div>
+    <script type="text/javascript">
+        addEventListener
+          function changeColor(){
+              let red = document.getElementById('inputRed').value;
+              let green = document.getElementById('inputGreen').value;
+              let blue = document.getElementById('inputBlue').value;
+              let color = "rgb("+red+","+green+","+blue+")";
+              document.body.style.backgroundColor = color;
+              document.getElementById('colorChanging').innerHTML= color;
+          }
+          inputRed.addEventListener('input',changeColor);
+          inputGreen.addEventListener('input',changeColor);
+          inputBlue.addEventListener('input',changeColor);
+    </script>
 
 
 
