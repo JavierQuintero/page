@@ -2,7 +2,7 @@
     position: relative;
     height: 600px;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 .parallax{
     position: absolute;
@@ -19,7 +19,7 @@
     font-size: 4em;
     color: #fff;
     text-align: center;
-    margin-top: -85px;
+    margin-top: -125px;
     transition: opacity 0.3s ease;
 }
 .contenedorParallax .titulo:hover{
