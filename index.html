@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/styleTablet.css">
     <link rel="stylesheet" href="css/styleSlider.css">
     <link rel="stylesheet" href="css/styleParallax.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clip-anime.css">
     <title>DevJavi: Actualización sin límite</title>
     <!-- jQuery -->
@@ -95,6 +96,12 @@
             background-color: rgb(20, 43, 85);
             cursor: pointer;
         }
+        /* .pere{
+            position: relative;
+        }
+        .pere div{
+            position: absolute;
+        } */
     </style>
     <!-- animate.css -->
     <style>
@@ -355,10 +362,15 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         </div>
      -->
-    <h2 class="tituloParticles" id="Particles-JS">Fondos interactivos</h2>
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
+    <div class="pere"> 
+        <div>
+            <h2 class="tituloParticles" id="Particles-JS">Fondos interactivos</h2>
+        </div>
+            <!-- particles.js container -->
+        <div>
+            <div id="particles-js"></div>
+        </div>
+    </div>
     <!-- <div class="contenido">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
@@ -487,7 +499,44 @@
             animate();
     </script>
 
-    <div class="social">
+    <!-- sectionAyuda -->
+    <div style="position: relative;">
+        <main>
+            <section class="landing">
+              <nav class="navBarra">
+                <h1 id="logo">Afloat</h1>
+                <ul class="nav-links">
+                  <li>Home</li>
+                  <li>Contact</li>
+                  <li>About</li>
+                </ul>
+              </nav>
+              <h2 class="big-text">Stay Afloat</h2>
+            </section>
+          </main>
+          <div class="intro">
+            <div class="intro-text">
+              <h1 class="hide">
+                <span class="text">Creating inovation</span>
+              </h1>
+              <h1 class="hide">
+                <span class="text">For Everyday</span>
+              </h1>
+              <h1 class="hide">
+                <span class="text">people.</span>
+              </h1>
+            </div>
+          </div>
+          <div class="slider"></div></div>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"
+      ></script>
+      <script src="./js/appSect.js"></script>
+ 
+ 
+      <div class="social">
         <ul>
             <li><a href="https://www.facebook.com/JavierQuinteroPosada" class="icon face" target="_blanck">Facebook</a></li>
             <li><a href="https://www.linkedin.com/in/javier-quintero-216399181" class="icon tweet" target="_blanck">Linkedin</a></li>
