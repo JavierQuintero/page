@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/styleTablet.css">
     <link rel="stylesheet" href="css/styleSlider.css">
     <link rel="stylesheet" href="css/styleParallax.css">
+    <link rel="stylesheet" href="css/styleParticles.css">
+    <link rel="stylesheet" href="css/styleAnime.css">
+    <link rel="stylesheet" href="css/styleInputs.css">
+    <link rel="stylesheet" href="css/styleCanvas.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clip-anime.css">
     <title>DevJavi: Actualización sin límite</title>
@@ -81,100 +85,7 @@
         }
 
     </style>
-    <!-- particles -->
-    <style>
-        .tituloParticles{
-            margin: 30px 10%;
-            font-family: 'Nunito', sans-serif;
-            font-size: 2.8em;
 
-            font-variant: small-caps;
-        }
-        #particles-js{
-            width: 100%;
-            height: 100vh;
-            background-color: rgb(20, 43, 85);
-            cursor: pointer;
-        }
-        /* .pere{
-            position: relative;
-        }
-        .pere div{
-            position: absolute;
-        } */
-    </style>
-    <!-- animate.css -->
-    <style>
-        .my-element {
-            display: inline-block;
-            margin: 0 0.5rem;
-            animation: shakeY 2300ms infinite alternate both;
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        }
-
-       
-    </style>
-    <!-- inputs -->
-    <style type="text/css">
-    .divInput{
-        margin: 10%;
-    }
-    @media (max-width: 764px;){
-        .divInput{
-            margin: 18%;
-        }
-    }
-        input[type=range]{
-            display:block;
-            width:90%;
-            height:15px;
-            margin:20px auto;
-            border-radius:5px;
-            appearance: none;
-            background:transparent;
-            box-shadow: inset 0 3px 18px rgba(0,0,0,0.6);
-            outline:none;
-        }
-        input[type=range]::-webkit-slider-thumb{
-            appearance: none;
-            width:2.5em;
-            height:2.5em;
-            background-color: #eee;
-            border-radius: 50px;
-            cursor:pointer;
-        }
-        input[type=range]::-webkit-slider-thumb:hover{
-            box-shadow: 0 0 0 3px rgba(0,0,0,0.1),
-                        0 0 0 6px #eee;
-        }
-        input[type=range]:active::-webkit-slider-thumb{
-            box-shadow: 0 0 0 3px rgba(0,0,0,0.1),
-                        0 0 0 6px #eee;
-        }
-        input[type=range]:after{
-            content:'255';
-            color:#fff;
-        }
-        input[type=range]:before{
-            content:'0';
-            color:#fff;
-        }
-        
-        
-    </style>
-    <!-- canvas -->
-    <style>
-        #canvas1{
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: -10;
-            background: #9bbbc0;
-            filter: url("#goo");
-        }
-    </style>
 </head>
 
 <body>
@@ -252,69 +163,17 @@
             
     </header>    
    
-        <!-- Animacion scrollNavBar -->
-    <script type="text/javascript">
-		
-        let $ubiPrin = window.pageYOffset; //$ubiPrin = ubicacionPrincipal
-		window.onscroll = function(){
-			let $des = window.pageYOffset; //$des = desplazamiento
-			if($ubiPrin >= $des){
-				document.getElementById('navbar').style.top = '0';
-			}else{
-				document.getElementById('navbar').style.top = '-100px';
-                document.getElementById("btn-menu").checked = false;
-			}
-		}
-    </script>
 
-        <!-- Animacion slider -->
-    <script>
-        let slider = document.querySelector('.slider-contenedor');
-        let targetSlider = document.querySelectorAll('.contenido-slider');
-        let contador = 1; //contador
-        let width = targetSlider[0].clientWidth;
-        let intervalo = 7000;
-
-        window.addEventListener('resize', function(){
-            width = targetSlider[0].clientWidth;
-        })
-
-        setInterval(function(){
-            slides();
-        },intervalo);
-        
-        function slides(){
-            slider.style.transform = "translate("+(-width*contador)+"px)";
-            slider.style.transition ="transform 1s";
-            contador++
-            if(contador == targetSlider.length){
-                setTimeout(function(){
-                    slider.style.transform = "translate(0px)";
-                    slider.style.transition ="transform 0s";
-                    contador = 1;
-                },intervalo/2)
-            }
-        };
-    </script>
     
     <p class="cite"><cite autor="David Ogilvy" >"Las mejores ideas vienen como chistes. Haz tus pensamientos tan divertidos como puedas"</cite></p>
     
     
+    <!-- Parallax -->
     <section class="contenedorParallax" id="parallax">
         <div class="parallax"></div>
         <h2 class="titulo">Todos lo que te imaginas, <br/>plasmado en la red</h2>
     </section>
-        <!-- Parallax -->
-    <script>
-        let parallax = document.querySelector(".parallax");
-        let titulo = document.querySelector(".titulo");
-        function Scroll(){
-            let scrollTop = document.documentElement.scrollTop;
-            parallax.style.transform = 'translateY('+ scrollTop*-0.5 +'px)';
-            titulo.style.transform = 'translateY('+ scrollTop*0.31 +'px)'
-        }
-        window.addEventListener('scroll', Scroll);
-    </script>
+
 
         <!-- <div class="contenido">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
@@ -336,32 +195,7 @@
         <div class="caja">R</div>
     </div>
     
-    <script>
-        var elements = document.querySelector('.caja');
-            // pendiente
-        var widthPage = document.documentElement.clientWidth;
-        var ancho = widthPage/ 9.8;
-        debugger
-        
-            anime({
-              targets: '.caja',
-              translateX: anime.stagger(ancho),
-              delay: anime.stagger(200,{
-                                        from:'last',
-                                        start: 1200,
-                                        easing: 'easeInOutCubic'
-                                    }),
-              direction: 'alternate',
-              duration: 4000,
-              loop: true
-            });
-    </script>
-        <!-- <div class="contenido">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        </div>
-     -->
+
     <div class="pere"> 
         <div>
             <h2 class="tituloParticles" id="Particles-JS">Fondos interactivos</h2>
@@ -371,13 +205,7 @@
             <div id="particles-js"></div>
         </div>
     </div>
-    <!-- <div class="contenido">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatibus alias, in officiis voluptate architecto? Perspiciatis voluptates officiis consequatur pariatur non ad aliquid, exercitationem iusto quae expedita? Hic, doloremque eos.</p>
-    </div> -->
-
+   
         <!-- Inputs -->
     <div class="divInput containerAnime">
             <h2>Selecciona tu color: </h2>
@@ -393,20 +221,6 @@
             <label for="inputBlue" >blue:</label>
             <input type="range" id="inputBlue" value="172" min="0" max="255" >
     </div>
-    <script type="text/javascript">
-            addEventListener
-              function changeColor(){
-                  let red = document.getElementById('inputRed').value;
-                  let green = document.getElementById('inputGreen').value;
-                  let blue = document.getElementById('inputBlue').value;
-                  let color = "rgb("+red+","+green+","+blue+")";
-                  document.body.style.backgroundColor = color;
-                  document.getElementById('colorChanging').innerHTML= color;
-              }
-              inputRed.addEventListener('input',changeColor);
-              inputGreen.addEventListener('input',changeColor);
-              inputBlue.addEventListener('input',changeColor);
-    </script>
 
     <!-- canvas -->
     <div>
@@ -416,88 +230,6 @@
             </div>
                 <canvas id="canvas1"></canvas>
     </div>
-    <script>
-            const canvas = document.getElementById("canvas1");
-            const ctx = canvas.getContext("2d");
-    
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            let particleArray = [];
-            const numeroParticulas = 800;
-    
-            // llammar posicion mouse
-    
-            const mouse = {
-                x : null,
-                y : null
-            }
-            window.addEventListener('mousemove', function(event){
-                mouse.x = event.x;
-                mouse.y = event.y;
-                // console.log(mouse.x, mouse.y);
-            });
-            setInterval(function(){
-                mouse.x = undefined;
-                mouse.y = undefined;
-            },200);
-    
-            //crear Particulas
-            class Particles{
-                constructor(x, y, size, color, weight){
-                    this.x = x;
-                    this.y = y;
-                    this.size = size;
-                    this.color = color;
-                    this.weight = weight; 
-                }
-                draw(){
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                    ctx.fillStyle = this.color;
-                    ctx.fill();
-                }
-                update(){
-                    this.size -= 0.05;
-                    if(this.size < 0 ){
-                        this.x = (mouse.x +((Math.random() * 20)- 10));
-                        this.y = (mouse.y +((Math.random() * 20)- 10));
-                        this.size = (Math.random() * 15) + 2;
-                        this.weight = (Math.random() *6) - 0.5;
-                    }
-                    this.y += this.weight;
-                    this.weight += 0.5;
-    
-                    if(this.y > canvas.height - this.size){
-                        this.weight *= -0.6;
-                    };
-                }
-            }
-            function init(){
-                particleArray = [];
-                for(let i = 0; i<numeroParticulas; i++){
-                    let x = Math.random() * canvas.width;
-                    let y = Math.random() * canvas.height;
-                    let size = (Math.random() * 5) + 2;
-                    let color = "#2092a4";
-                    let weight = 1;
-                    particleArray.push(new Particles(x, y, size,color, weight));
-                    
-                }
-            }
-            //Funcion de llamado recurcibo
-            function animate(){
-                ctx.clearRect(0,0,canvas.width,canvas.height);
-                // ctx.fillStyle = "rgba(0,0,0,0.1)";
-                // ctx.fillRect(0, 0, canvas.width, canvas.height);
-                for(let i = 0; i<particleArray.length;i++){
-                    particleArray[i].update();
-                    particleArray[i].draw();
-                }
-                requestAnimationFrame(animate);
-            }
-            init();
-            animate();
-    </script>
 
     <!-- sectionAyuda -->
     <!-- <div style="position: relative;">
@@ -556,5 +288,12 @@
   
     <script src="./js/particles.js"></script>
     <script src="./js/app.js"></script>
+
+    <script src="js/scrollBar.js"></script>
+    <script src="js/sliderPer.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="js/canvasMousePersonal.js"></script>
+    <script src="js/animeExterno.js"></script>
+    <script src="js/parallaxPersonal.js"></script>
 </body>
 </html>
