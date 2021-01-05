@@ -22,12 +22,15 @@
     letter-spacing: 3px;
 
 }
+.tT{
+    word-spacing: 0.5em;
+}
 .contenido-slider:nth-child(2){
-    background: #0E604E;
+    background: linear-gradient(90deg,#1f28ae, #ffffff44);
     color: #fff;
 }
 .contenido-slider:nth-child(3){
-    background: linear-gradient(45deg, rgb(22, 37, 53),rgb(95, 62, 30));
+    background: linear-gradient(45deg, rgb(22, 37, 53),rgba(63, 95, 30, 0.412));
     color: #fff;
 }
 .contenido-slider:nth-child(2) a{
