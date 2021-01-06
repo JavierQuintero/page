@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Formulario</legend>
+            <div>
+            
+                <h1>Registrarse como Dev</h1>
+                <p>Complete información!</p>
+            
+            </div>
+            <form>
+                <fieldset>
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" name="name" id="nombre" required="required" >
+                    </div>
+                    <div>
+                        <label>Apodo</label>
+                        <input type="text" name="sobrenombre" id="apodo" >
+                    </div>
+                </fieldset>
+                <br>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" >
+                </div>
+                <div>
+                    <label>De que lado de la app Desarrollas?</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="devWeb" value="front-end" >
+                        Front-end
+                    </label>
+                    <label>
+                        <input type="radio" name="devWeb" value="back-end" >
+                        Back-end
+                    </label>
+                    <label>
+                        <input type="radio" name="devWeb" value="full-stack" checked="checked" >
+                        Full-stack
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <label>Antigüedad</label>
+                    <select id="antiguo" >
+                        <option selected="selected" disabled="disabled" value=""  >Seleccione...</option>
+                        <option>Junior</option>
+                        <option>Master</option>
+                        <option>Professional</option>
+                    </select>
+                </div>
+                <br>
+                <fieldset>
+                    <div>
+                        <label>Seleccione las tecnologías que maneja:</label><br><br>
+                    
+                        <input type="checkbox" id="tecno1" name="tecno1" value="HTML" >
+                        <label for="tecno1">HTML</label>
+                        <input type="checkbox" id="tecno2" name="tecno2" value="CSS" >
+                        <label for="tecno2">CSS</label>
+                        <input type="checkbox" id="tecno3" name="tecno3" value="Javascript" >
+                        <label for="tecno3">Javascript</label>
+                        <input type="checkbox" id="tecno4" name="tecno4" value="PHP" >
+                        <label for="tecno4">PHP</label>
+                        <input type="checkbox" id="tecno5" name="tecno5" value="C#" >
+                        <label for="tecno5">C#</label>
+                        <input type="checkbox" id="tecno6" name="tecno6" value="Pyton" >
+                        <label for="tecno6">Pyton</label>
+                        <input type="checkbox" id="tecno7" name="tecno7" value="HTML" >
+                        <label for="tecno7">Java</label>
+                    </div>
+                </fieldset>
+                <br>
+                <div>
+                    <label>Experiencia laboral...</label>
+                    <textarea rows="6" style="width: 90%; display: block; margin: auto;" placeholder="Cuentame sobre tus proyectos..." ></textarea>
+                </div>
+                <br>
+                <button type="submit" >Terminado</button>
+            </form>
+        </fieldset>
+
+        <div class="container">
+            <div class="row">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Atmosfera</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="https://javierquintero.github.io/page" target="_blanck" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+</body>
+</html>
