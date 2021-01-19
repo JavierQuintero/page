@@ -1,5 +1,5 @@
 :root{
-    --colorIcon:#000;
+    --colorIcon:rgba(223, 219, 219, 0.877);
     --bgIcon:#000;
 }
 
@@ -25,7 +25,7 @@
 }
         .social ul li:hover a{
             box-sizing: border-box;
-            border-top: .5px solid #000;
+            border-top: .5px solid var(--colorIcon);
         }
 
 .social ul li a{
