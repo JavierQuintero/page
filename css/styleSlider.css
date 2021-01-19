@@ -73,9 +73,7 @@
     }
 }
 @media screen and (max-width:768px){
-    .contenedorSlid{      
-        margin-top: 40px;
-    }
+  
     .imgSlid{
         width: 280px;
         /* margin-top: 20px; */

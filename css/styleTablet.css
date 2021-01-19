@@ -5,13 +5,18 @@
     .navBar{
         display: none;
     }
+    #btn-menu:checked ~ .nave{      
+        background: #fff;
+    }
     #btn-menu:checked ~ .navBar{
         display: block;
     }
+    
     #navbar{
         flex-direction: column;
-        background: #ccc;
+        background: rgba(204, 204, 204, 0.836);
     }
+    
     .menuFlex{
         display: flex;
         width: 100%;

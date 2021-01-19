@@ -108,6 +108,9 @@
 			display: none;
 
 		}
+		.navegacion li a{
+			text-shadow: 0 0 rgb(255, 250, 250);
+		}
 		
 	}
 
