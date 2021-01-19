@@ -12,8 +12,9 @@
     cursor: pointer;
 }
 /* .pere{
-    position: relative;
+    position: absolute;
 }
 .pere > div{
     position: absolute;
+    z-index: -1;
 } */

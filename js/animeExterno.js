@@ -2,7 +2,7 @@ var elements = document.querySelector('.caja');
 // pendiente
 var widthPage = document.documentElement.clientWidth;
 var ancho = widthPage/ 9.8;
-debugger
+//debugger
 
 anime({
   targets: '.caja',

@@ -4,19 +4,19 @@
 <style type="text/css">
 	body{
 		background:#222;
-		height:100vh;
-		display:flex;
-		justify-content:center;
-		align-items:center;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.ventana{
-		position:relative;
-		width: 250px;
-		height:240px;
-		border:1.4px solid #a7a;
-		border-radius:10px;
-		overflow:hidden;
-		box-sizing:border-box;
+		position: relative;
+		width: 340px;
+		height: 540px;
+		border: 1.4px solid #a7a;
+		border-radius: 10px;
+		overflow: hidden;
+		box-sizing: border-box;
 	}
 	.ventana::after{
 		content:'';
@@ -27,70 +27,109 @@
 		top:0;
 	}
 	
-	
-	.btn-menu{
-		--t:20px;
+	.btn-Menu{
 		position:relative;
-		width:var(--t);
-		height:var(--t);
+		width: 6%;
+		height: 4%;
 		border:1px solid #ab3;
 		border-radius:50%;
 		float: right;
-		top: 3%;
-		right:5px;
-		margin: 0 3px;
+		top: 4.5%;
+		right: 5px;
+		margin: 0 8px;
 		z-index:5;
-		transition: transform 550ms, background 1s;
+		transition: transform 550ms, background 1000ms;
 	}
-	.btn-menu:hover{
+	.btn-Menu:hover{
 		transform:scale(1.5);
 		background:#fff;
 	}
 	
 	.tituloVentana{
-		position:relative;
-		width:55%;
-		height:20px;
+		position: relative;
+		width: 55%;
+		height: 20px;
 		background:#fff;
-		top: 25%;
+		top: 22%;
 		left: 8%;
-		border-radius:10px;
+		border-radius: 10px;
 	}
 	.tituloVentana:hover{
 		animation:ani1 3s ease-in infinite;
 	}
 	.contenidoGroup{
 		position: relative;
-		top: 30%;
+		top: 32%;
+		width: 100%;
+		height: 55%;
+
+		display: grid;	
+		grid-template-columns: 1fr;
 	}
 	.contenidoP{
 		position:relative;
-		margin-top: 5%;
-		width:85%;
+		margin-top: 4%;
+		width:80%;
 		height:18px;
 		background:#ccc;
 		top: 28%;
-		left: 8%;
+		left: 10%;
+		justify-content: center;
+		align-items: center;
 		border-radius:10px;
 		transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+		animation: ani2 2550ms ease;
 	}
 	.contenidoP:hover{
-		transform:scale(1.05);
 		background:#fff;
 	}
 	
 	@keyframes ani1{
 		0%{background:#fff;}
+		25%{background:rgb(129, 66, 66);}
 		50%{background:red;}
+		70%{background:rgb(49, 52, 102);}
 		90%{background:blue;}
+	}
+	@keyframes ani2 {
+		0%{
+			opacity: 0;
+			transform: translate(-10%);
+		}
+		50%{
+			opacity: 0.3;
+			transform: translate(-30%);
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	@media (max-width: 768px) {
+		.ventana{
+			width: 50%;
+			height: 70%;
+		}
+		.contenidoGroup{
+			top: 20%;
+		}
+		
+		
+	}
+	@media only screen and (max-width: 320px) {
+		.ventana{
+			width: 70%;
+			height: 70%;
+		}
+		
+		
 	}
 </style>
 </head>
 <body>
 	<div class="ventana" >
-		<div class="btn-menu" ></div>
-		<div class="btn-menu" ></div>
-		<div class="btn-menu" ></div>
+		<div class="btn-Menu" ></div>
+		<div class="btn-Menu" ></div>
+		<div class="btn-Menu" ></div>
 		
 		<div class="tituloVentana" ></div>
 		
@@ -99,6 +138,10 @@
 			<div class="contenidoP" ></div>
 			<div class="contenidoP" ></div>
 			<div class="contenidoP" ></div>
+			<div class="contenidoP" ></div>
+			<a href="http://javierquintero.github.io/page" target="_blank">
+				<div class="contenidoP" ></div>
+			</a>
 		</div>
 	</div>
 </body>

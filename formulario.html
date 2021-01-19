@@ -15,17 +15,33 @@
                 <p>Complete información!</p>
             
             </div>
-            <form>
-                <fieldset>
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" name="name" id="nombre" required="required" >
-                    </div>
-                    <div>
-                        <label>Apodo</label>
-                        <input type="text" name="sobrenombre" id="apodo" >
-                    </div>
-                </fieldset>
+            <form width="100%">
+               
+                   <div class="row">
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="medium-6 cell">
+                            <label>Input Label
+                              <input type="text" placeholder="Nombre"name="name" id="nombre" required="required" >
+                            </label>
+                          </div>
+                          <div class="medium-6 cell">
+                            <label>Input Label
+                              <input type="text" placeholder="sobreNombre" name="sobrenombre" id="apodo" >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                      <div class="grid-x grid-padding-x">
+                        <div class="small-3 cell">
+                          <label for="right-label" class="text-right">Label</label>
+                        </div>
+                        <div class="small-9 cell">
+                          <input type="text" id="right-label" placeholder="Right-aligned text input">
+                        </div>
+                      </div>
+                
                 <br>
                 <div>
                     <label>Email</label>

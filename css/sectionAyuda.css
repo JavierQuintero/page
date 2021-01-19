@@ -37,11 +37,20 @@
 }
 
 .hide span {
+  margin-left: 15%;
   transform: translateY(100%);
   display: inline-block;
 }
 @media (max-width:768px){
   .intro-text{
     font-size: 2rem;
+  }
+  .hide span {
+    margin-left: 10%;
+  }
+}
+@media (max-width: 360px){
+  .intro-text{
+    font-size: 1.6em;
   }
 }
