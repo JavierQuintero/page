@@ -5,9 +5,6 @@
     .navBar{
         display: none;
     }
-    #btn-menu:checked ~ .nave{      
-        background: #fff;
-    }
     #btn-menu:checked ~ .navBar{
         display: block;
     }

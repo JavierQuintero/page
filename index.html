@@ -112,6 +112,10 @@
             text-decoration: none;
             color: #fff;
         }
+        .data-footer ul li:hover a  {
+            color: rgb(231, 216, 216);
+            text-shadow: 0 0 3px #fff;
+        }
         .contentFooter{
             font-size: 1.5em;
             position: relative;
@@ -120,14 +124,42 @@
         .contentFooter h2{
             margin-left: 2em;
         }
+        .rS{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+
+            margin-bottom: 1em;
+            position: relative;
+        }
+        .rC{
+            width: 2em;
+            height: 2em;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 500ms;
+           
+        }
+        
+        .rC:hover{
+            background: rgb(231, 216, 216);
+            transform: scale(1.2);
+        }
+        .rC img{
+            width: 100%;
+        }
         @media (max-width: 768px) {
             .footer{
+                height: 105vh;
                 grid-template-columns: 1fr;
                 grid-gap: 20px;
             }
             .data-footer{
                 margin-bottom: 25px;
 
+            }
+            .rS{
+                grid-gap: 10px;
             }
         }
     </style>
@@ -311,6 +343,20 @@
                 </ul>
             </div>
             <div class="data-footer">
+                <div class="rS">
+                    <div class="rC">
+                        <img src="img/svg/icono02.svg" alt="" >
+                    </div>
+                    <div class="rC">
+                        <img src="img/svg/icono01.svg" alt="" >
+                    </div>
+                    <div class="rC">
+                        <img src="img/svg/icono03.svg" alt="">
+                    </div>
+                    <div class="rC">
+                        <img src="img/svg/iconoPrin.svg" alt="">
+                    </div>
+                </div>
                 <i>ejviquin@gmail.com</i>
                 <span>©</span>
             </div>
