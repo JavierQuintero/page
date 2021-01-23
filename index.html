@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/styleCanvas.css">
     <link rel="stylesheet" href="css/sectionAyuda.css">
     <link rel="stylesheet" href="css/clip-anime.css">
+    <link rel="stylesheet" href="css/styleTarget3d.css">
     <title>DevJavi: Actualización sin límite</title>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -126,7 +127,7 @@
         }
         .rS{
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 20px;
 
             margin-bottom: 1em;
@@ -140,7 +141,6 @@
             transition: transform 500ms;
            
         }
-        
         .rC:hover{
             background: rgb(231, 216, 216);
             transform: scale(1.2);
@@ -264,7 +264,34 @@
         <div class="caja">E</div>
         <div class="caja">R</div>
     </div>
-    
+    <!-- target 3d   -->
+    <h2 class="textTarget tituloParticles">Tarjeta 3d - Covid 19</h2>
+    <div class="bodyTarget3d">
+        <div class="container">
+            <div class="card">
+                <div class="sneaker">
+                    <div class="circle"></div>
+                    <img src="./img/virus.svg" alt="adidas">
+                </div>
+                <div class="info">
+                    <h1 class="title">Covid-19 en <span class="paisCovid">Colombia</span></h1>
+                    <h3>TOTAL CONTAGIADOS.</h3>
+                    <p class="conta">000000</p>
+                    <div class="sizes">
+                        <!-- <button>Fallecidos</button>
+                        <button>Nuevos casos</button>
+                        <button class="active">42</button>
+                        <button>44</button> -->
+                    </div>
+                    <div class="purchase">
+                        <button>Recuperados: <span class="userRecupe"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="./js/js/appTarget3d.js"></script>
+        <script src="./js/js/covid.js" type="module"></script>
 
     <div class="pere"> 
         <div>
