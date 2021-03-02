@@ -6,7 +6,7 @@ import {$pC as pais,
 
 fetch('https://api.covid19api.com/summary')
 .then(covidData => covidData.json())
-.then(pais => pais.Countries[35])//Colombia = 35
+.then(pais => pais.Countries[36])//Colombia = 36
 .then(data => {
     renderText(pais, data.Country)
     renderText(fallecidos, data.TotalConfirmed)
